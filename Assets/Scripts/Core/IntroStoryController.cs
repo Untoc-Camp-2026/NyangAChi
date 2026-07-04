@@ -15,7 +15,7 @@ public class IntroStoryController : MonoBehaviour
     public Image catImageComponent;  // 고양이 캐릭터 이미지 컴포넌트
 
     [Header("리소스 등록용 배열")]
-    // 유니티 에디터에서 연수님이 그려준 사진들을 순서대로 넣을 칸입니다.
+    // 유니티 에디터에서 연수님이 그려준 사진들을 순서대로 넣을 칸
     public Sprite[] backgroundSprites;
     public Sprite[] catSprites;
 
@@ -78,7 +78,7 @@ public class IntroStoryController : MonoBehaviour
         SceneManager.LoadScene("KitchenScene");
     }
 
-    // ★ 핵심: 대사 번호(currentIndex)에 따라 배경과 고양이 사진을 바꿔주는 함수
+    // 대사 번호(currentIndex)에 따라 배경과 고양이 사진을 바꿔주는 함수
     private void ApplySceneDirection()
     {
         storyText.text = stories[currentIndex];
