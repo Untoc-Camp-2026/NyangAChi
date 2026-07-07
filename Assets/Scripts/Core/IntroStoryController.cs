@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Rendering;
 
 public class IntroStoryController : MonoBehaviour
 {
@@ -23,17 +24,18 @@ public class IntroStoryController : MonoBehaviour
     private string[] stories = new string[]
     {
         "내 이름은 나비. 얼마 전까지만 해도 차가운 아스팔트 위를 떠돌던 길고양이었다냥.", // 0번대사
-        "운 좋게 상냥한 집사를 만나 따뜻한 집고양이가 되었고, 매일 포근한 침대 속에서 행복한 나날을 보내고 있지.", // 1번
+        "운 좋게 상냥한 집사를 만나 따뜻한 집고양이가 되었고, \n매일 포근한 침대 속에서 행복한 나날을 보내고 있지.", // 1번
         "하지만... 푹신한 이불에 누울 때마다 자꾸만 눈에 밟히는 얼굴들이 있다냥.", // 2번
         "지금 이 순간에도 매서운 밤바람을 맞으며 쓰레기통을 뒤지고 있을, 내 옛 길거리 친구들...", // 3번
         "녀석들에게도 배부르고 따뜻한 밤을 선물해 주고 싶다냥! 그래서 결심했다냥.", // 4번
         "인간 집사가 모두 잠든 깊은 밤, 주방 문을 몰래 열고 우리들만의 비밀 음식점 '묘수'를 시작하기로!", // 5번
         "친구들에게 최고의 요리를 대접하려면 낮 동안 부지런히 신선한 재료를 모아야 한다냥.", // 6번
         "동네 쓰레기통도 은밀히 수색하고, 가끔은 애교를 부려 인간들의 간식도 받아내야지!", // 7번
-        "오늘 밤도 배고픈 친구들이 하나둘씩 찾아올 거다냥. 자, 서둘러 주방으로 가서 밤손님들을 맞이할 준비를 해보자구!" // 8번
+        "오늘 밤도 배고픈 친구들이 하나둘씩 찾아올 거다냥. \n자, 서둘러 주방으로 가서 밤손님들을 맞이할 준비를 해보자구!" // 8번
     };
 
     private int currentIndex = 0;
+    public GameObject settingPanel;
 
     void Start()
     {
@@ -76,6 +78,16 @@ public class IntroStoryController : MonoBehaviour
     public void OnClickStart()
     {
         SceneManager.LoadScene("KitchenScene");
+    }
+
+    public void OpenSetting()
+    {
+        if (settingPanel != null) settingPanel.SetActive(true);
+    }
+
+    public void CloseSetting()
+    {
+        if (settingPanel != null) settingPanel.SetActive(false);  
     }
 
     // 대사 번호(currentIndex)에 따라 배경과 고양이 사진을 바꿔주는 함수
