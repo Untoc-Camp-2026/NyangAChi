@@ -169,13 +169,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: food-1_0
+      name: item_mackerel
       rect:
         serializedVersion: 2
-        x: 97
-        y: 1097
+        x: 95
+        y: 1071
         width: 207
-        height: 159
+        height: 207
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,10 +194,10 @@ TextureImporter:
       name: item_anchovy
       rect:
         serializedVersion: 2
-        x: 393
-        y: 1173
+        x: 391
+        y: 1130
         width: 170
-        height: 77
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,10 +216,10 @@ TextureImporter:
       name: item_tuna
       rect:
         serializedVersion: 2
-        x: 707
-        y: 1108
-        width: 353
-        height: 174
+        x: 706
+        y: 1007
+        width: 354
+        height: 343
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,13 +235,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_3
+      name: item_salmon
       rect:
         serializedVersion: 2
-        x: 1155
-        y: 1132
+        x: 1151
+        y: 1044
         width: 295
-        height: 120
+        height: 295
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,13 +257,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_4
+      name: item_shrimp
       rect:
         serializedVersion: 2
         x: 1524
         y: 1097
         width: 222
-        height: 213
+        height: 222
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,12 +279,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_5
+      name: item_milk
       rect:
         serializedVersion: 2
-        x: 148
+        x: 134
         y: 854
-        width: 144
+        width: 176
         height: 176
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -304,9 +304,9 @@ TextureImporter:
       name: item_salt
       rect:
         serializedVersion: 2
-        x: 361
+        x: 337
         y: 895
-        width: 95
+        width: 139
         height: 139
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -323,12 +323,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_7
+      name: item_soy_sauce
       rect:
         serializedVersion: 2
-        x: 613
-        y: 824
-        width: 110
+        x: 535
+        y: 828
+        width: 263
         height: 263
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -345,13 +345,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_8
+      name: item_can
       rect:
         serializedVersion: 2
-        x: 859
-        y: 874
+        x: 857
+        y: 863
         width: 161
-        height: 137
+        height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -367,7 +367,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_9
+      name: item_clam
       rect:
         serializedVersion: 2
         x: 1206
@@ -389,13 +389,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_10
+      name: item_gold_anchovy
       rect:
         serializedVersion: 2
         x: 1420
-        y: 928
+        y: 886
         width: 170
-        height: 77
+        height: 170
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,12 +411,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_11
+      name: item_seaweed
       rect:
         serializedVersion: 2
-        x: 1634
-        y: 890
-        width: 112
+        x: 1621
+        y: 887
+        width: 144
         height: 144
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -433,13 +433,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_12
+      name: food_salted_mackerel
       rect:
         serializedVersion: 2
-        x: 264
-        y: 580
+        x: 262
+        y: 519
         width: 286
-        height: 162
+        height: 286
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -455,12 +455,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_13
+      name: food_warm_milk
       rect:
         serializedVersion: 2
-        x: 665
+        x: 643
         y: 584
-        width: 181
+        width: 214
         height: 214
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -477,13 +477,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_14
+      name: food_tuna_sashimi
       rect:
         serializedVersion: 2
-        x: 1034
-        y: 578
+        x: 1029
+        y: 544
         width: 259
-        height: 182
+        height: 259
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -499,7 +499,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_15
+      name: item_egg
       rect:
         serializedVersion: 2
         x: 1450
@@ -521,7 +521,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_16
+      name: item_rice_grain
       rect:
         serializedVersion: 2
         x: 1601
@@ -543,13 +543,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lemon
+      name: item_lemon
       rect:
         serializedVersion: 2
         x: 130
-        y: 379
+        y: 373
         width: 147
-        height: 131
+        height: 147
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,13 +565,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_18
+      name: food_grilled_anchovy
       rect:
         serializedVersion: 2
         x: 468
-        y: 484
+        y: 425
         width: 173
-        height: 57
+        height: 173
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -587,13 +587,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_19
+      name: food_soy_mackerel
       rect:
         serializedVersion: 2
-        x: 765
-        y: 392
+        x: 768
+        y: 378
         width: 160
-        height: 124
+        height: 160
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -609,7 +609,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_20
+      name: item_gold_rice
       rect:
         serializedVersion: 2
         x: 1363
@@ -631,13 +631,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_21
+      name: food_can_mackerel
       rect:
         serializedVersion: 2
         x: 1030
         y: 292
         width: 193
-        height: 178
+        height: 193
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,13 +653,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_22
+      name: food_can_tuna
       rect:
         serializedVersion: 2
         x: 1383
-        y: 157
+        y: 143
         width: 161
-        height: 137
+        height: 161
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -675,13 +675,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-1_23
+      name: food_hot_can_tuna
       rect:
         serializedVersion: 2
-        x: 1585
-        y: 175
+        x: 1587
+        y: 150
         width: 202
-        height: 146
+        height: 202
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -710,30 +710,30 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      food-1_0: -1510627822185635520
-      food-1_10: -2128349417172754595
-      food-1_11: 6752670801888776406
-      food-1_12: -4861445590583631916
-      food-1_13: 3636850271192871763
-      food-1_14: -2753554993989311747
-      food-1_15: 3928339489839497884
-      food-1_16: 541462671374947085
-      food-1_18: 6183750965723412083
-      food-1_19: -7960691409864309540
-      food-1_20: 8483072458500690133
-      food-1_21: -7409392682775497378
-      food-1_22: -3816821538481944678
-      food-1_23: -2825710305226461329
-      food-1_3: -6537576614281914062
-      food-1_4: 8145727682657194275
-      food-1_5: -5099888205553450011
-      food-1_7: 9113110559366852264
-      food-1_8: 8371575318235030066
-      food-1_9: 234171835113328558
+      food_can_mackerel: -7409392682775497378
+      food_can_tuna: -3816821538481944678
+      food_grilled_anchovy: 6183750965723412083
+      food_hot_can_tuna: -2825710305226461329
+      food_salted_mackerel: -4861445590583631916
+      food_soy_mackerel: -7960691409864309540
+      food_tuna_sashimi: -2753554993989311747
+      food_warm_milk: 3636850271192871763
       item_anchovy: -3473278383729500528
+      item_can: 8371575318235030066
+      item_clam: 234171835113328558
+      item_egg: 3928339489839497884
+      item_gold_anchovy: -2128349417172754595
+      item_gold_rice: 8483072458500690133
+      item_lemon: 954900758203600016
+      item_mackerel: -1510627822185635520
+      item_milk: -5099888205553450011
+      item_rice_grain: 541462671374947085
+      item_salmon: -6537576614281914062
       item_salt: -8914664281797256629
+      item_seaweed: 6752670801888776406
+      item_shrimp: 8145727682657194275
+      item_soy_sauce: 9113110559366852264
       item_tuna: 2567534816269774649
-      lemon: 954900758203600016
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

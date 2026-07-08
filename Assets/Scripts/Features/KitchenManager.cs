@@ -1,84 +1,109 @@
-using System.Collections;
 using UnityEngine;
-using TMPro; // 텍스트 매시 프로(TextMeshPro) UI를 제어하기 위해 필수입니다.
+using TMPro;
+using System.Collections.Generic;
 
-public class OrderManager : MonoBehaviour
+[System.Serializable]
+public class IngredientMenuData
 {
-    [Header("화면 UI 패널")]
-    public GameObject counterPanel;       // 카운터(주문) 화면 패널
-    public GameObject kitchenPanel;       // 주방(조리) 화면 패널
+    public string name;
+    public Sprite sprite;
+    public int count = 999;
+    public TextMeshProUGUI countText;
+}
 
-    [Header("손님 대화 UI")]
-    public TextMeshProUGUI orderText;     // 손님의 대사가 표시될 텍스트 컴포넌트
-    
-    [Header("글자 출력 속도")]
-    public float typingSpeed = 0.05f; // 글자 간의 간격 (초 단위)
+public class KitchenManager : MonoBehaviour
+{
+    [Header("프리팹 및 연결")]
+    public GameObject ingredientPrefab;
+    public OrderManager orderManager; // 카운터로 돌아가기 위해 연결
 
-    // 타자기 효과를 실행할 코루틴 함수
-    IEnumerator TypeText(string textToType)
-    {
-        // 1. 우선 텍스트창에 전체 대사를 다 넣습니다.
-        orderText.text = textToType;
-        
-        // 2. 눈에 보이는 글자 수를 0개로 만듭니다. (글자가 순간적으로 다 숨겨짐)
-        orderText.maxVisibleCharacters = 0;
+    [Header("재료 데이터 목록")]
+    public List<IngredientMenuData> ingredientMenu = new List<IngredientMenuData>();
 
-        // 3. 텍스트가 유니티 내부에서 완전히 정렬될 때까지 딱 1프레임 기다려줍니다.
-        yield return null;
-
-        // 4. 전체 글자 수(인식된 글자)를 가져옵니다.
-        int totalVisibleCharacters = orderText.textInfo.characterCount;
-
-        // 5. 반복문을 돌며 글자를 한 글자씩 보이게 만듭니다.
-        for (int i = 0; i <= totalVisibleCharacters; i++)
-        {
-            orderText.maxVisibleCharacters = i; // 현재 순서만큼 글자를 노출
-            
-            // typingSpeed(0.05초)만큼 잠깐 쉬었다가 다음 루프(글자)로 넘어갑니다.
-            yield return new WaitForSeconds(typingSpeed); 
-        }
-    }
-    
-    // 손님들의 주문 대사 목록 (배열)
-    private string[] orderDialogues = new string[]
-    {
-        "페퍼로니 피자 하나 주세요.",
-        "치즈 피자 한 판 부탁해요. 소스랑 치즈만 올려서요.",
-        "치즈랑 페퍼로니 둘 다 듬뿍 들어간 피자 주세요!"
-    };
-
-    // 현재 손님이 주문한 내용을 저장하는 변수 (나중에 채점할 때 사용)
-    public static string currentOrder = "";
+    // 화면에 소환된 실제 재료 오브젝트(나중에 삭제하기 위함)
+    private List<GameObject> spawnedObjects = new List<GameObject>();
+    // 소환된 재료들의 이름 (채점용)
+    private List<string> spawnedIngredientNames = new List<string>();
 
     void Start()
     {
-        // 게임 시작 시 초기 화면 설정
-        counterPanel.SetActive(true);  // 카운터 화면 켜기
-        kitchenPanel.SetActive(false); // 주방 화면 끄기
-
-        // 첫 번째 손님의 주문을 생성합니다.
-        GenerateNewOrder();
+        UpdateMenuUI();
     }
 
     /// <summary>
-    /// 무작위 주문을 생성하여 대화창에 띄우는 함수
+    /// 우측 버튼을 눌러 재료를 스폰하는 함수
     /// </summary>
-    public void GenerateNewOrder()
+    public void OnClickSpawnIngredient(string ingredientName)
     {
-        int randomIndex = Random.Range(0, orderDialogues.Length);
-        currentOrder = orderDialogues[randomIndex];
+        IngredientMenuData data = ingredientMenu.Find(x => x.name == ingredientName);
+        if (data != null && data.count > 0)
+        {
+            data.count--;
+            UpdateMenuUI();
 
-        // [중요] 코루틴 함수는 그냥 실행하면 안 되고, 반드시 StartCoroutine()으로 감싸서 실행해야 합니다!
-        StartCoroutine(TypeText(currentOrder));
+            Vector2 randomOffset = Random.insideUnitCircle * 0.2f;
+            Vector3 spawnPosition = new Vector3(randomOffset.x, randomOffset.y, 0);
+
+            GameObject newObj = Instantiate(ingredientPrefab, spawnPosition, Quaternion.identity);
+            
+            SpriteRenderer sr = newObj.GetComponent<SpriteRenderer>();
+            if (sr != null && data.sprite != null) sr.sprite = data.sprite;
+
+            // 관리 리스트에 추가
+            spawnedObjects.Add(newObj);
+            spawnedIngredientNames.Add(ingredientName);
+
+            // 상단 UI 체크표시 켜기 (RecipeUIManager의 함수 호출)
+            orderManager.recipeUIManager.ActivateCheck(ingredientName);
+        }
     }
 
     /// <summary>
-    /// '피자 만들기' 버튼을 클릭했을 때 호출될 함수
+    /// '요리 완성' 버튼을 눌렀을 때 호출되는 함수
     /// </summary>
-    public void OnClickStartCooking()
+    public void OnClickCookComplete()
     {
-        // 화면을 전환합니다.
-        counterPanel.SetActive(false); // 카운터 화면 끄기
-        kitchenPanel.SetActive(true);  // 주방 화면 켜기
+        bool isSuccess = CheckRecipeSuccess();
+
+
+        // 도마 위 청소하기
+        foreach (GameObject obj in spawnedObjects)
+        {
+            Destroy(obj);
+        }
+        spawnedObjects.Clear();
+        spawnedIngredientNames.Clear();
+
+        // [변경] 바로 다음 손님을 받지 않고, 카운터 결과 화면 연출을 거치도록 합니다!
+        orderManager.EndOrder(isSuccess);
+    }
+
+    // 채점 로직 (들어간 재료 리스트와 요구 재료 리스트 비교)
+    private bool CheckRecipeSuccess()
+    {
+        RecipeData target = OrderManager.currentRecipe;
+
+        // 개수가 다르면 무조건 실패
+        if (spawnedIngredientNames.Count != target.requiredIngredients.Count) return false;
+
+        // 임시 리스트를 만들어 하나씩 매칭하며 지워나감
+        List<string> targetNames = new List<string>();
+        foreach (var req in target.requiredIngredients) targetNames.Add(req.ingredientName);
+
+        foreach (string spawnedName in spawnedIngredientNames)
+        {
+            if (targetNames.Contains(spawnedName)) targetNames.Remove(spawnedName);
+            else return false; // 필요 없는 재료가 들어감
+        }
+
+        return targetNames.Count == 0; // 남은 목표 재료가 없으면 완벽 성공
+    }
+
+    private void UpdateMenuUI()
+    {
+        foreach (var data in ingredientMenu)
+        {
+            if (data.countText != null) data.countText.text = data.count.ToString();
+        }
     }
 }

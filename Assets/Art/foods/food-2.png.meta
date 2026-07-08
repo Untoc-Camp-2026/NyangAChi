@@ -130,15 +130,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: food-2_0
+      name: food_grilled_salmon
       rect:
         serializedVersion: 2
-        x: 84
-        y: 848
+        x: 85
+        y: 828
         width: 190
-        height: 133
+        height: 190
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -152,15 +152,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_1
+      name: food_salmon_sashimi
       rect:
         serializedVersion: 2
         x: 375
-        y: 844
+        y: 818
         width: 201
-        height: 129
+        height: 200
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -174,15 +174,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_2
+      name: food_tuna_mayo
       rect:
         serializedVersion: 2
-        x: 653
-        y: 891
+        x: 654
+        y: 879
         width: 131
-        height: 98
+        height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -196,15 +196,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_3
+      name: food_rice
       rect:
         serializedVersion: 2
         x: 878
-        y: 911
+        y: 898
         width: 115
-        height: 105
+        height: 115
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -218,15 +218,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_4
+      name: food_mackerel_ball
       rect:
         serializedVersion: 2
         x: 1087
-        y: 898
+        y: 899
         width: 131
-        height: 123
+        height: 131
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -240,15 +240,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_5
+      name: food_tuna_mayo_bowl
       rect:
         serializedVersion: 2
-        x: 1310
-        y: 865
+        x: 1311
+        y: 842
         width: 206
-        height: 153
+        height: 206
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -262,15 +262,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_6
+      name: food_salmon_sushi
       rect:
         serializedVersion: 2
         x: 1658
-        y: 888
+        y: 855
         width: 172
-        height: 93
+        height: 172
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -284,37 +284,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_7
+      name: item_mayo
       rect:
         serializedVersion: 2
-        x: 921
-        y: 901
-        width: 28
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d5758189945aedc0800000000000000
-      internalID: -3608979133104294439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: food-2_8
-      rect:
-        serializedVersion: 2
-        x: 162
-        y: 581
-        width: 106
+        x: 102
+        y: 577
+        width: 221
         height: 221
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -328,15 +306,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_9
+      name: item_vinegar
       rect:
         serializedVersion: 2
-        x: 406
-        y: 546
-        width: 100
+        x: 341
+        y: 549
+        width: 237
         height: 237
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -350,15 +328,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: food-2_10
+      name: food_lemon_salmon
       rect:
         serializedVersion: 2
-        x: 614
-        y: 573
+        x: 615
+        y: 538
         width: 224
-        height: 140
+        height: 224
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,7 +353,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: eed05ceeff475f0458601315abb97c21
     internalID: 0
     vertices: []
     indices: 
@@ -385,17 +363,17 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      food-2_0: 7300809289509276898
-      food-2_1: 9156460368543577052
-      food-2_10: 7095526325395410985
-      food-2_2: -6148584099379976057
-      food-2_3: 3369397300887179045
-      food-2_4: -3386049420160393483
-      food-2_5: -3247673386069989137
-      food-2_6: -6715946501009383411
       food-2_7: -3608979133104294439
-      food-2_8: 8157921082527873889
-      food-2_9: -1840492024444492494
+      food_grilled_salmon: 7300809289509276898
+      food_lemon_salmon: 7095526325395410985
+      food_mackerel_ball: -3386049420160393483
+      food_rice: 3369397300887179045
+      food_salmon_sashimi: 9156460368543577052
+      food_salmon_sushi: -6715946501009383411
+      food_tuna_mayo: -6148584099379976057
+      food_tuna_mayo_bowl: -3247673386069989137
+      item_mayo: 8157921082527873889
+      item_vinegar: -1840492024444492494
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
