@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using System.Collections; 
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class OrderManager : MonoBehaviour
 {
@@ -70,6 +71,11 @@ public class OrderManager : MonoBehaviour
 
         string dialogueText = currentRecipe.resultDishName + randomSuffix;
         StartCoroutine(TypeText(dialogueText));
+    }
+
+    public void OnClickGoToStore()
+    {
+        SceneManager.LoadScene("StoreScene");
     }
 
     IEnumerator TypeText(string textToType)
